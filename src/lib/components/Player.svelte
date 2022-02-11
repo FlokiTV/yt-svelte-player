@@ -13,7 +13,7 @@
 </script>
 
 <div class="bg-white shadow-lg rounded-lg" style="max-width:400px;">
-  <div class="flex flex-col md:flex-row">
+  <div class="flex flex-col">
     <div>
       <img
         class="w-full rounded"
@@ -96,7 +96,7 @@
   </div>
   <div class="p-2">
     {#if mp3URL}
-      <audio controls autoplay>
+      <audio controls autoplay class="w-full">
         <source src={mp3URL} type="audio/mpeg" />
       </audio>
     {/if}

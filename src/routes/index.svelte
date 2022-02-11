@@ -44,6 +44,10 @@
   };
 </script>
 
+<head>
+  <title>YT Svelte API</title>
+</head>
+
 <!-- 400 x 560 -->
 <div class="w-screen h-screen">
   <div class="flex items-center justify-center h-screen bg-gray-900 p-2">
