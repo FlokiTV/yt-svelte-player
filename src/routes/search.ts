@@ -4,7 +4,7 @@ import ytsr from "ytsr";
 export async function get({ request, url }) {
   const searchResults = await ytsr(url.searchParams.get("q"), {
     hl: "pt-BR",
-    gl: "BR",
+    gl: "pt-BR",
     limit: 15,
   });
 

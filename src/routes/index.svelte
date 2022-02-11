@@ -18,7 +18,6 @@
     try {
       let result = await axios.get(`/search?q=${searchQuery}`);
       searchResult = result.data.items;
-      console.log(searchResult);
     } catch (error) {
       console.log(error);
     }
