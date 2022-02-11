@@ -1,6 +1,7 @@
 <script lang="ts">
   import { getThumbnail } from "$lib/types/yt";
   import IconPlay from "$lib/icon/IconPlay.svelte";
+  import IconSearch from "$lib/icon/IconSearch.svelte";
   export let currentSong;
   export let mp3URL;
   export let doOpenSearch: any;
@@ -35,7 +36,8 @@
             doOpenSearch();
           }}
         >
-          <svg
+          <IconSearch />
+          <!-- <svg
             class="w-6 h-6"
             fill="currentColor"
             xmlns="http://www.w3.org/2000/svg"
@@ -43,7 +45,7 @@
             ><path
               d="M10 3.22l-.61-.6a5.5 5.5 0 0 0-7.78 7.77L10 18.78l8.39-8.4a5.5 5.5 0 0 0-7.78-7.77l-.61.61z"
             /></svg
-          >
+          > -->
         </button>
       </div>
 
