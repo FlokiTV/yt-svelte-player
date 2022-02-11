@@ -44,6 +44,7 @@
   };
 </script>
 
+<!--  -->
 <head>
   <title>YT Svelte API</title>
 </head>
