@@ -37,7 +37,7 @@
     } catch (error) {
       console.log(error);
     }
-    // searchQuery = "";
+    // searchQuery = ""; //reset search
   };
   const onKeyPress = (e) => {
     if (e.charCode === 13) doSearch();
