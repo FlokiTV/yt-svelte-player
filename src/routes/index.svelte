@@ -45,7 +45,7 @@
 </script>
 
 <head>
-  <title>YT Svelte API</title>
+  <title>YT Svelte API - by FlokiTV</title>
 </head>
 
 <!-- 400 x 560 -->
