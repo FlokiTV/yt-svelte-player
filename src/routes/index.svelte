@@ -1,7 +1,7 @@
 <script lang="ts">
   import IconChevronLeft from "$lib/icon/IconChevronLeft.svelte";
   import IconSearch from "$lib/icon/IconSearch.svelte";
-  import Player from "$lib/player.svelte";
+  import Player from "$lib/components/Player.svelte";
   import axios from "axios";
   import type { YTItem, MP3 } from "$lib/types/yt";
   import { getThumbnail } from "$lib/types/yt";
