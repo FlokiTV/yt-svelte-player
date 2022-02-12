@@ -4,6 +4,7 @@
   import Player from "$lib/components/Player.svelte";
   import axios from "axios";
   import { page } from "$app/stores";
+  import { goto } from "$app/navigation";
   import type { YTItem, MP3 } from "$lib/types/yt";
   import { getThumbnail } from "$lib/types/yt";
 
@@ -48,6 +49,7 @@
       currentSong = song;
       openSearch = false;
       $page.url.searchParams.set("v", song.id);
+      goto(`${$page.url.search}`);
     } catch (error) {
       console.log(error);
     }
