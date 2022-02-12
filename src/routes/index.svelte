@@ -3,15 +3,30 @@
   import IconSearch from "$lib/icon/IconSearch.svelte";
   import Player from "$lib/components/Player.svelte";
   import axios from "axios";
+  import { page } from "$app/stores";
   import type { YTItem, MP3 } from "$lib/types/yt";
   import { getThumbnail } from "$lib/types/yt";
+
   let openSearch = false;
   let currentSong: YTItem;
   let currentMP3: MP3;
-  let test = new Array(100);
   let searchResult = [];
   let searchQuery = "";
   let searching = false;
+
+  const init = async (id) => {
+    try {
+      let result = await axios.get(`/info?id=${id}`);
+      setSong(result.data);
+    } catch (error) {
+      console.log(error);
+    }
+  };
+  const id = $page.url.searchParams.get("v");
+  if (id) {
+    init(id);
+  }
+
   const doSearch = async () => {
     searchResult = [];
     searching = true;
@@ -32,7 +47,7 @@
       currentMP3 = result.data;
       currentSong = song;
       openSearch = false;
-      console.log(currentMP3);
+      $page.url.searchParams.set("v", song.id);
     } catch (error) {
       console.log(error);
     }
